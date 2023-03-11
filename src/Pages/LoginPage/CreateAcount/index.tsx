@@ -5,8 +5,8 @@ import { useCallback, useContext } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { AccessContext } from "../../../Context/context";
-import { ImageLogin } from "..";
+import { AccessContext } from "../../../Context/firebaseAuth";
+import { ImageLogin } from "../../../components/ImageLogin/index";
 
 interface UserDataType {
     data?: FieldValues

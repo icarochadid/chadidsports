@@ -2,6 +2,7 @@ import {Route, Routes, createBrowserRouter, RouterProvider} from 'react-router-d
 import { CreateAcount } from '../Pages/LoginPage/CreateAcount'
 import { Login } from '../Pages/LoginPage/Login'
 import { MenuPage } from '../Pages/MenuPage/Index'
+import { ProductPage } from '../Pages/ProductsPage'
 export function Router() {
     const router = createBrowserRouter([
         {
@@ -16,6 +17,10 @@ export function Router() {
         {
             path: '/menu',
             element: (<MenuPage/>)
+        },
+        {
+            path: '/produtos',
+            element: (<ProductPage/>)
         }
     ])
     return (

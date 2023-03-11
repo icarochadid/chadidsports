@@ -2,13 +2,13 @@ import { Container, LoginContainer } from "./styled";
 import Logo from '../../../assets/logo.png'
 import google from '../../../assets/google.png'
 import { NavLink, useNavigate } from "react-router-dom";
-import { ImageLogin } from "..";    
-import { Field, FieldValues, useForm } from "react-hook-form";
+import {  FieldValues, useForm } from "react-hook-form";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { getAuth } from "firebase/auth";
-import { useCallback, useContext, useState } from "react";
-import { AccessContext } from "../../../Context/context";
-import { ErrorMessage } from "@hookform/error-message";
+import {  useContext, useState } from "react";
+import { AccessContext } from "../../../Context/firebaseAuth";
+import { ImageLogin } from "../../../components/ImageLogin";
+
 
 export function Login() {
     const {SingInWithGoogle} = useContext(AccessContext)

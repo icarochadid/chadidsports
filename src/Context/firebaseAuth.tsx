@@ -63,7 +63,6 @@ export function AccessProvider({children}: ChildrenType) {
         email: '',
         password: ''
     }) 
-    const [product, setProduct] = useState<Product[]>([])
     function getUserData(data: userDataType) {
             const UserData = {
                 name: data.name,
@@ -74,7 +73,6 @@ export function AccessProvider({children}: ChildrenType) {
         .then((userCredential) => {
             const user = userCredential.user;
             setauthedUserData(UserData);     
-            redirect('/menu')   
         } 
             )
         .catch((error) => {
