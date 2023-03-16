@@ -5,11 +5,17 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 7rem;
-  
-  img{
-    margin-top: 2rem;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+  }
+  button > img{
+    margin-top: -1rem;
+    margin-left: 1.5rem;
     width: 15rem;
-    height: 15rem;
+    
   }
   
   nav > a {

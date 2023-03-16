@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useState, useEffect } from "react";
 
 interface ContextProductsType {
   products: Array<ProductType>,
@@ -13,7 +13,7 @@ interface ProductType {
   id: string,
   name: string, 
   description: string, 
-  default_price: any, 
+  price: string, 
   images: string,
   metadata: {
     [key: string] : string
@@ -26,7 +26,12 @@ export const ContextProducts = createContext<ContextProductsType>({
 })
 
 export function ProductsProvider({children}: childrenType) {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState(() => {
+    const productsFromLocalStorage = localStorage.getItem('products')
+    if (productsFromLocalStorage) {
+      return JSON.parse(productsFromLocalStorage)
+    } return []
+  });
   const url = import.meta.env.VITE_STRIPE_API_URL;
   const stripeAPIKey = import.meta.env.VITE_STRIPE_SECRET_KEY;
  
@@ -39,32 +44,37 @@ export function ProductsProvider({children}: childrenType) {
     })
     const convertResponse = await response.json()
     const filteredProducts = convertResponse.data
-    console.log(filteredProducts)
     const productsObjects = filteredProducts.filter((product:ProductType) => {
-      const metadata = product.metadata
-      return !!metadata[metadataValue]
-    }).map((product: ProductType) => {
+      const metadata = product.metadata.Category
+      return metadata == metadataValue
+      }).map((product: ProductType) => {
         const name = product.name
         const id = product.id
         const description = product.description
         const images = product.images[0]
-        const default_price = product.default_price
-        const metadata = product.metadata
+        const price = product.metadata.Price
+        const metadata = product.metadata.Category
       const productObject = {
         name, 
         id,
         description, 
         images,
-        default_price,
+        price,
         metadata
       }
       return productObject
     }).reverse()
-    console.log(productsObjects)
+    localStorage.setItem('products', JSON.stringify(productsObjects))
     setProducts(productsObjects)
     return productsObjects
-  }
-  
+  } 
+    
+  useEffect(() => {
+    const productsFromLocalStorage = localStorage.getItem('products');
+    if (productsFromLocalStorage) {
+      setProducts(JSON.parse(productsFromLocalStorage))
+    }
+    }, [])
   return (
     <ContextProducts.Provider value={{ products, getProductsList}}>
       {children}

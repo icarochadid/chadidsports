@@ -2,6 +2,8 @@ import {Route, Routes, createBrowserRouter, RouterProvider} from 'react-router-d
 import { CreateAcount } from '../Pages/LoginPage/CreateAcount'
 import { Login } from '../Pages/LoginPage/Login'
 import { MenuPage } from '../Pages/MenuPage/Index'
+import { Creator } from '../Pages/NavBark/Criador'
+import { Tecnologies } from '../Pages/NavBark/Descrição/Tecnologias'
 import { ProductPage } from '../Pages/ProductsPage'
 export function Router() {
     const router = createBrowserRouter([
@@ -19,8 +21,16 @@ export function Router() {
             element: (<MenuPage/>)
         },
         {
-            path: '/produtos',
+            path: '/produtos/:id',
             element: (<ProductPage/>)
+        },
+        {
+            path: '/criador',
+            element: (<Creator/>)
+        },
+        {
+            path: '/tecnologias',
+            element: (<Tecnologies/>)
         }
     ])
     return (
