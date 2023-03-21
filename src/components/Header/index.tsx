@@ -14,7 +14,6 @@ export function Header() {
         <nav>
           <NavLink to={'/criador'}>Quem é o criador?</NavLink>
           <NavLink to={'/tecnologias'}>Tecnologias Ultilizadas</NavLink>
-          <a href="#">O que é a ChadidSports?</a>
         </nav>
       </div>
    </HeaderContainer>

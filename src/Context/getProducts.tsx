@@ -9,12 +9,14 @@ interface childrenType {
   children: ReactNode
 }
 
-interface ProductType {
+export interface ProductType {
+  map(arg0: (product: ProductType) => JSX.Element): ReactNode;
   id: string,
   name: string, 
   description: string, 
   price: string, 
   images: string,
+  default_price: any,
   metadata: {
     [key: string] : string
   }
@@ -52,6 +54,7 @@ export function ProductsProvider({children}: childrenType) {
         const id = product.id
         const description = product.description
         const images = product.images[0]
+        const default_price = product.default_price
         const price = product.metadata.Price
         const metadata = product.metadata.Category
       const productObject = {
@@ -60,7 +63,8 @@ export function ProductsProvider({children}: childrenType) {
         description, 
         images,
         price,
-        metadata
+        metadata,
+        default_price
       }
       return productObject
     }).reverse()
