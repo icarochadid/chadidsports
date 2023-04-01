@@ -60,7 +60,7 @@ export function Login() {
         <Container>
         <LoginContainer>
                 <div>
-                <div><h1><img src={Logo} alt="" /></h1></div>
+                <div><img src={Logo} alt="" /></div>
                     <form action="" onSubmit={handleSubmit(UserAccessing)}>
                         <h1>Faça seu Login</h1>
                         {error && <p role='alert'>{error}</p>}

@@ -21,7 +21,7 @@ export const LoginContainer = styled.section`
         height: 80%;
     div{ 
         
-        h1 > img{
+         img{
                 margin-top: 9.2rem;
                 max-width: 15rem;
                 max-height: 15rem;
@@ -83,7 +83,8 @@ export const LoginContainer = styled.section`
             color: ${props=> props.theme['title']}
         }}
 }}
-button{ display:flex;
+    button{ 
+    display:flex;
         gap: 9px;
         justify-content: center;
         align-items: center;
@@ -108,4 +109,84 @@ button{ display:flex;
        }
     }
     
+    @media (min-width:100px) and (max-width:812px){
+        width: 100%;
+
+        div{
+            margin-top: -9rem;
+            div{
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+            img {
+                width: 60%;
+                height:60%;
+            }
+            }
+            h1{
+                font-size: 28px;
+            }
+            form > input, button{
+                height: 2.5rem !important;
+            }
+            p{
+                text-align: center;
+                font-size: 16px !important;
+            }
+            
+        }
+    }
+    @media (min-width: 830px) and (max-width:1024px ) {
+
+        div{
+            margin-top: -9rem;
+            div{
+ 
+            img {
+                width: 60%;
+                height:60%;
+            }
+            }
+           
+            form > input, button{
+                height: 2.5rem !important;
+            }
+           
+            
+        }
+    }
+    @media (min-width: 1440px) {
+        div{
+            margin-top: -11rem;
+            div{    
+                margin-bottom: -4rem;
+            }
+            h1{
+                margin-top: -7rem;
+                font-size: 3rem;
+            }
+            form > input:not([type=submit]) {
+                margin-bottom: 1.5rem;
+            }
+        }   
+    }
+    @media (min-width: 1920px) {
+        div{
+            margin-top: -11rem;
+            div{    
+                margin-bottom: -4rem;
+                img{
+                    width: 350%;
+                    height: 250%;
+                }
+            }
+            h1{
+                margin-top: -7rem;
+                font-size: 5rem;
+            }
+            form > input:not([type=submit]) {
+                margin-bottom: 1.5rem;
+            }
+        }   
+    }
 `

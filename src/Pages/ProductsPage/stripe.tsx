@@ -5,5 +5,5 @@ export const getStripe = async  () => {
   if (!stripePromise) {
     stripePromise =  await loadStripe(`pk_test_51MfnwSFJELNUrWkLrU9XagVmgpaKnwCoNhWNNNwEkwd5sVGVhxZJ0UAbJfKHOjl88tfKUTsd7srqBzXCkpf9irmk00sjyTwbVn`)
   }  
-  return stripePromise;
-}
+  return stripePromise
+}  
