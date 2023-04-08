@@ -37,6 +37,15 @@ export const Container = styled.div`
        }
 
     }
-
-
+ 
+    @media (max-width:480px) {
+      section {
+        width: 95%;
+      
+      span > img {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+  }
 `

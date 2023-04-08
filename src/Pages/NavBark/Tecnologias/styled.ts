@@ -49,6 +49,13 @@ export const Container = styled.section`
     margin-left: 1rem;
   }
 
+  @media (max-width:480px) {
+    div {
+      flex-direction: column;
+      align-items: center;
+      width: 95%;
+    }
+  }
 `
 export const Description = styled.span`
   display: flex;
@@ -64,4 +71,8 @@ export const Description = styled.span`
     color: ${props => props.theme['template-red']};
   }
 
+  @media (max-width:480px) {
+    margin-top: 1rem;
+    width: 100%;
+  }
 `

@@ -42,5 +42,19 @@ export const Container = styled.div`
       }
     }
   }
+  @media (max-width: 480px) {
+    section {
+      text-align: center;
+      width: 94%;
+      img{
+      width: 5rem;
+      height: 5rem;
+    }
+    h1{
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+    }
+  }
 `
 

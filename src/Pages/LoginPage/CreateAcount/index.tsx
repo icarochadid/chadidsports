@@ -33,13 +33,7 @@ export function CreateAcount() {
 return(
 <Container>     
     <CreateAccountContainer>
-            <div>
-                <div>
-                    <h1>
-                        <img src={Logo} alt="" />
-                    </h1>
-                </div>
-            
+                <div><img src={Logo} alt="" /></div>
                 <form action="" onSubmit={handleSubmit(onSubmit)}>
                     <h1>Crie sua Conta</h1>
                     <input type="text"
@@ -66,15 +60,14 @@ return(
                     { errors.password?.type === 'maxLength' &&
                         <p role='alert'>Senha deve conter no máximo 15 caracteres</p>}
                     
-                    <input type="submit" value="Criar Conta" />
+                    <input id="createaccount" type="submit" value="Criar Conta" />
                     <p>Já tem uma conta? 
                         <NavLink to={'/'}> Faça seu login </NavLink>
                     </p>
                     <p>Ou</p>
                       <button onClick={onGoogleSubmit} > <img src={google} alt="" /> Entre com o Google</button>
                 </form>
-        </div>
-          
+        
 </CreateAccountContainer>   
     <ImageLogin/>
 </Container>

@@ -49,4 +49,28 @@ export const Container = styled.div`
     }
     }
   }
+  @media (max-width: 480px) {
+    section {
+      text-align: center;
+      width: 94%;
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      img{
+      width: 5rem;
+      height: 5rem;
+    }
+    h1{
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+    }
+    div{
+      flex-direction: column;
+      align-items: center;
+      
+      button {
+        margin-bottom: -1rem;
+      }
+    }
+  }
 `

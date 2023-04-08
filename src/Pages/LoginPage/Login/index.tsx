@@ -59,7 +59,6 @@ export function Login() {
     return (
         <Container>
         <LoginContainer>
-                <div>
                 <div><img src={Logo} alt="" /></div>
                     <form action="" onSubmit={handleSubmit(UserAccessing)}>
                         <h1>Faça seu Login</h1>
@@ -70,13 +69,12 @@ export function Login() {
                         <input type="password" 
                             placeholder='Digite sua senha' 
                             {...register('password')} />
-                        <input type="submit" value="Login" />
+                        <input id="login" type="submit" value="Login" />
                         <p>Ainda não tem uma conta? 
                          <NavLink to={'/criarconta'}> Criar Conta </NavLink></p>
                         <p>Ou</p>
                         <button onClick={AccessingWithGoogle}> <img src={google} alt="" /> Entre com o Google</button>
-                    </form>
-                </div>
+                    </form>      
             </LoginContainer>
             <ImageLogin/>
             </Container>

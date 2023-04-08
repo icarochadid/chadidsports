@@ -4,49 +4,26 @@ import futebol from '../../assets/MenuPageImages/futebol.jpg'
 import boxe from '../../assets/MenuPageImages/boxe.jpg'
 import futebolamericano from '../../assets/MenuPageImages/futebolamericano.jpg'
 import natação from '../../assets/MenuPageImages/natação.jpg'
-export const HeaderContainer = styled.header`
-background-color: ${props => props.theme['template-red']};
-height: 6.5rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-box-shadow: 0px 5px 5px ${props => props.theme['shadow-color']};
-    img{
-        max-height: 13rem;
-        max-width: 13rem;
-        margin-top:2rem
-    }
-    div{
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        gap: 1rem;
-        margin-right:2rem;
-        p{
-        color: ${props=> props.theme['font-color']};
-        font-weight: bold;
-        font-size: 17px;
-        }
-        img{
-        width: 3.5rem;
-        height: 3.5rem;
-        margin-bottom:2rem;
-        }
-        
-    }
-    
-`;
+
 export const Title = styled.div`
 margin-top: 3rem;
 color: ${props => props.theme.title};
 font-size: 35px;
 text-align:center;
-`
+`   
 export const ModalitiesContanainer = styled.span`
 display: flex;
 justify-content: center;
 gap: 3rem;
 margin-top: 5rem;
+
+@media(max-width:480px){
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    
+}
 `;
 export const Futebol = styled.div`
     background-image: url(${futebol});
@@ -191,4 +168,4 @@ export const FutebolAmericano = styled.div`
         width: 13rem;
         height: 13rem;
     }
-`;
+`

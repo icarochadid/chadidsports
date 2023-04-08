@@ -11,7 +11,7 @@ export function Tecnologies() {
   return (
     <div>
       <Header/>
-      <Title>As tecnologias ultilizadas nestes projetos foram:</Title>""
+      <Title>As tecnologias ultilizadas nestes projetos foram:</Title>
       <Container>
         <div>
           <img id='react' src={react} alt="" />
@@ -33,7 +33,7 @@ export function Tecnologies() {
         
         <div>
           <img id='styled-components' src={styledcomponents} alt="" />
-         <Description>
+         <Description> 
             <p><strong>Tecnologia:</strong> Styled Components</p>
             <p><strong>Versão:</strong>5.3.6 </p>
             <p><a href="https://styled-components.com" target='_blank'>Conheça mais sobre</a></p>

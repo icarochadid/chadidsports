@@ -51,5 +51,13 @@ div{
 
     }
 }
+ 
+@media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
 
+    div{
+        width: 80%;
+    }
+}
 `

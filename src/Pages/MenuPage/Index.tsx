@@ -2,7 +2,7 @@ import { useCallback, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Header } from '../../components/Header'
 import { ContextProducts } from '../../Context/getProducts'
-import { Basquete, Boxe, Futebol, FutebolAmericano, HeaderContainer, ModalitiesContanainer, Natação, Title } from './styles'
+import { Basquete, Boxe, Futebol, FutebolAmericano,  ModalitiesContanainer, Natação, Title } from './styles'
 
 
 
