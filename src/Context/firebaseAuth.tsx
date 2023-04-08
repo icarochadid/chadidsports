@@ -1,10 +1,8 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode,  useState } from "react";
 import {initializeApp} from 'firebase/app';
 import {getAnalytics} from 'firebase/analytics';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { GoogleAuthProvider } from "firebase/auth";
-import { redirect } from "react-router-dom";
-import axios from 'axios'
 interface userAccessType {
    getUserData: (data:any) => void;
     authedUserData: {
