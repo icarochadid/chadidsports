@@ -22,8 +22,8 @@ export function ProductPage() {
           },
         ],
         mode: 'payment',
-        successUrl: 'http://localhost:5173/sucesso',
-        cancelUrl: 'http://localhost:5173/cancelado'
+        successUrl: 'https://chadidsports-w3hn.vercel.app/sucesso',
+        cancelUrl: 'https://chadidsports-w3hn.vercel.app/cancelado'
       });
     } catch (error) {
       console.log(error)
