@@ -37,3 +37,4 @@ coverage/
 *.ipr
 *.iws
 out-tsc/
+.vercel

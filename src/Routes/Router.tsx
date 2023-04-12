@@ -16,7 +16,8 @@ export function Router() {
         },
         {
             path: '/',
-            element: (<Login/>)
+            element: (<Login />),
+            
         },
         {
             path: '/menu',
